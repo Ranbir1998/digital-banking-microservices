@@ -118,13 +118,14 @@ This diagram presents the application's high-level architecture. It is not inten
 The following diagram illustrates the intended event-driven transaction workflow.
 
 ```mermaid
-%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#E8F0FE", "primaryTextColor": "#111827", "primaryBorderColor": "#2563EB", "lineColor": "#374151", "textColor": "#111827", "actorBkg": "#DBEAFE", "actorBorder": "#2563EB", "actorTextColor": "#111827", "actorLineColor": "#64748B", "signalColor": "#111827", "signalTextColor": "#111827", "labelBoxBkgColor": "#E5E7EB", "labelTextColor": "#111827", "loopTextColor": "#111827", "noteTextColor": "#111827", "activationBkgColor": "#DBEAFE", "sequenceNumberColor": "#111827"}}}%%
+%%{init: {"theme": "base", "themeVariables": {"background": "#ffffff", "primaryColor": "#dbeafe", "primaryTextColor": "#111827", "primaryBorderColor": "#2563eb", "lineColor": "#475569", "textColor": "#111827", "actorBkg": "#dbeafe", "actorTextColor": "#111827", "actorBorder": "#2563eb", "actorLineColor": "#475569", "signalColor": "#111827", "signalTextColor": "#111827", "labelBoxBkgColor": "#eff6ff", "labelTextColor": "#111827", "loopTextColor": "#111827", "noteBkgColor": "#fef3c7", "noteTextColor": "#111827"}}}%%
+
 sequenceDiagram
     participant User
     participant Gateway as API Gateway
     participant Transaction as Transaction Service
     participant Kafka
-    participant Fraud as Fraud Detection
+    participant Fraud as Fraud Detection Service
     participant Account as Account Service
     participant Notification as Notification Service
 
@@ -146,6 +147,7 @@ sequenceDiagram
     else Transaction flagged
         Fraud->>Kafka: Publish fraud.detected
         Kafka->>Notification: Deliver fraud alert
+        Kafka->>Account: Deliver fraud event
     end
 ```
 
