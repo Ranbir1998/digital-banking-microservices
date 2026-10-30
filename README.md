@@ -229,9 +229,9 @@ The following checks were completed in the local Docker development environment:
 | Build all six application images        | Passed           |
 | Start all ten Docker Compose containers | Passed           |
 | Account Service health endpoint         | `UP`             |
-| End-to-end money transfer               | Not yet verified |
-| Fraud-detection event flow              | Not yet verified |
-| Payment gateway integration             | Not yet verified |
+| End-to-end money transfer               | Passed           |
+| Fraud-detection event flow              | Passed           |
+| Payment gateway integration             | Passed           |
 
 ## Project Structure
 
