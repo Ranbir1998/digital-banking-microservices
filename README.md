@@ -117,7 +117,7 @@ This diagram presents the application's high-level architecture. It is not inten
 
 The following diagram illustrates the intended event-driven transaction workflow.
 
-````mermaid
+```mermaid
 %%{init: {"theme": "dark", "themeVariables": {"primaryColor": "#1e293b", "primaryTextColor": "#ffffff", "primaryBorderColor": "#60a5fa", "lineColor": "#e2e8f0", "textColor": "#ffffff", "actorBkg": "#1e293b", "actorTextColor": "#ffffff", "actorBorder": "#60a5fa", "actorLineColor": "#cbd5e1", "signalColor": "#ffffff", "signalTextColor": "#ffffff", "labelBoxBkgColor": "#334155", "labelTextColor": "#ffffff", "loopTextColor": "#ffffff", "noteBkgColor": "#334155", "noteTextColor": "#ffffff"}}}%%
 
 sequenceDiagram
@@ -150,6 +150,7 @@ sequenceDiagram
         Kafka->>Account: Deliver fraud event
     end
 ```
+
 The complete transaction workflow has not yet been validated through end-to-end testing.
 
 ## Kafka Event Topics
@@ -279,4 +280,3 @@ Local development work includes updates to Docker-based builds, environment-vari
 Future independently implemented enhancements will be documented separately.
 
 Redistribution of the original implementation is subject to the original author's permission and applicable license terms.
-````
