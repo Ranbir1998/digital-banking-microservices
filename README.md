@@ -269,14 +269,10 @@ digital-banking-microservices/
 - CI/CD automation.
 - Resilience testing for asynchronous event processing.
 
-## Development and Attribution
+## Development and Ownership
 
-This project builds upon the Digital Banking System microservices implementation by **Ranbir Singh**.
+The Digital Banking System is a personal project independently developed by Ranbir Singh.
 
-The existing implementation provides the banking services and their underlying application logic.
+The project includes microservices built using Java, Spring Boot, Kafka, Redis, and MySQL, with Docker-based containerization and environment-variable configuration.
 
-Local development work includes updates to Docker-based builds, environment-variable configuration, deployment setup, and project documentation.
-
-Future independently implemented enhancements will be documented separately.
-
-Redistribution of the original implementation is subject to the original author's permission and applicable license terms.
+Development work covers backend service implementation, event-driven communication, API integrations, deployment configuration, and technical documentation.
